@@ -1,7 +1,10 @@
 <script setup lang="ts">
 import HelloWorld from './components/HelloWorld.vue'
+import ZhiHuHot from "./components/ZhiHuHot.vue";
+
 import dayjs from "dayjs";
 import { Person } from "@alwaysxxx/tools";
+
 const p = new Person("alwaysxxx", "plan");
 </script>
 
@@ -17,7 +20,7 @@ const p = new Person("alwaysxxx", "plan");
     </a>
   </div>
   <HelloWorld msg="Vite + Vue" />
-
+  <ZhiHuHot />
 </template>
 
 <style scoped>
