@@ -8,6 +8,7 @@ export default antfu({
   // 在Flat配置中不再支持' .eslintignore '，请使用' ignore '代替
   ignores: [
     // '**/a.ts',
+    './math-project-vue/src/types/type.ts',
   ],
 
   // 自定义风格规则 https://eslint.style/rules
@@ -45,7 +46,6 @@ export default antfu({
   })
   .override('antfu/typescript/rules', {
     rules: {
-      'ts/no-explicit-any': 'error', // 禁止使用any
       'jsdoc/sort-tags': ['warn'],
       'ts/ban-ts-comment': 'off', // 禁止使用 @ts-ignore
       // "ts/no-unused-expressions": "off",
