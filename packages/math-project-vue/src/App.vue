@@ -36,8 +36,14 @@ import HelloWorld from './components/HelloWorld.vue'
       </li>
       <li>
         <RouterLink to="/adapt" class="flex items-center rounded-md bg-gray-100 px-4 py-2 transition duration-300 hover:bg-gray-200">
-          <i class="icon-apifox mr-2" />
+          <i class="icon-adapt mr-2" />
           Adapt
+        </RouterLink>
+      </li>
+      <li>
+        <RouterLink to="/messagebox" class="flex items-center rounded-md bg-gray-100 px-4 py-2 transition duration-300 hover:bg-gray-200">
+          <i class="icon-messagebox mr-2" />
+          MessageBox
         </RouterLink>
       </li>
     </ul>

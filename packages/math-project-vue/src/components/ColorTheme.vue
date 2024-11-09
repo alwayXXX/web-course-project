@@ -4,10 +4,16 @@ import dayjs from 'dayjs'
 import { useDark } from '../composables/useDark.ts'
 
 const { enableDarkMode, disableDarkMode } = useDark()
+function onThemeChange(e: string) {
+  document.body.className = e
+}
 const p = new Person('alwaysxxx', 'plan')
 </script>
 
 <template>
+  <s-button bg-cyan>
+    123
+  </s-button>
   <div>{{ dayjs().format("YYYY-MM-DD HH:mm:ss") }}</div>
   <div>{{ p.name }}</div>
 
@@ -20,6 +26,34 @@ const p = new Person('alwaysxxx', 'plan')
         Light
       </button>
     </div>
+  </div>
+
+  <header flex items-center justify-center gap-2>
+    <h2>主题切换</h2>
+    <button @click="onThemeChange('default')">
+      default
+    </button>
+    <button @click="onThemeChange('peaple')">
+      peaple
+    </button>
+    <button @click="onThemeChange('spring')">
+      spring
+    </button>
+  </header>
+
+  <div mb-3 flex justify-center gap-2>
+    <button bg-primary text-white>
+      primary
+    </button>
+    <button bg-warning text-white>
+      warning
+    </button>
+    <button bg-danger text-white>
+      danger
+    </button>
+    <button bg-info text-white>
+      info
+    </button>
   </div>
 
   <p class="m-auto size-100 hover:(bg-cyan text-4xl)" content-center transition-1000>
